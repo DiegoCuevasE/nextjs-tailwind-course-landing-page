@@ -2,16 +2,16 @@ import { Typography, Button, Input } from "@material-tailwind/react";
 
 const LINKS = [
   {
-    title: "Company",
-    items: ["About Us", "Careers", "Premium Tools", "Blog"],
+    title: "Yo",
+    items: ["Quien soy?", "Que hago", "Porque lo hago?", "Ni idea bro"],
   },
   {
-    title: "Pages",
-    items: ["Login", "Register", "Add List", "Contact"],
+    title: "Páginas",
+    items: ["Home", "OtAIku", "Musicológo", "Cobreloa"],
   },
   {
-    title: "Legal",
-    items: ["Terms", "Privacy", "Team", "About Us"],
+    title: "Pa ti",
+    items: ["Youtube", "Crunchyroll", "Netflix", "Spotify"],
   },
 ];
 
@@ -25,7 +25,7 @@ export function Footer() {
           <div className="flex col-span-2 items-center gap-10 mb-10 lg:mb-0 md:gap-36">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
-                <Typography variant="h6" color="blue-gray" className="mb-4">
+                <Typography variant="h6" className="mb-4 text-orange-900">
                   {title}
                 </Typography>
                 {items.map((link) => (
@@ -33,7 +33,7 @@ export function Footer() {
                     <Typography
                       as="a"
                       href="#"
-                      className="py-1 font-normal !text-gray-700 transition-colors hover:!text-gray-900"
+                      className="py-1 font-normal !text-gray-500 transition-colors hover:!text-gray-700"
                     >
                       {link}
                     </Typography>
@@ -77,13 +77,13 @@ export function Footer() {
           color="blue-gray"
           className="md:text-center mt-16 font-normal !text-gray-700"
         >
-          &copy; {CURRENT_YEAR} Made with{" "}
+          &copy; {CURRENT_YEAR} Template sacado desde{" "}
           <a href="https://www.material-tailwind.com" target="_blank">
             Material Tailwind
           </a>{" "}
           by{" "}
           <a href="https://www.creative-tim.com" target="_blank">
-            Creative Tim
+            Creative Tim y modificao por MII EL DIKORN
           </a>
           .
         </Typography>

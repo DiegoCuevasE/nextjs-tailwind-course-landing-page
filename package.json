@@ -4,29 +4,34 @@
   "private": true,
   "author": "Creative Tim",
   "license": "See license in https://www.creative-tim.com/license",
-  "homepage": "https://demos.creative-tim.com/nextjs-tailwind-course-landing-page",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "2.0.18",
-    "@material-tailwind/react": "2.1.2",
-    "next": "13.4.0",
-    "react": "18",
-    "react-dom": "18"
+    "@material-tailwind/react": "^2.1.10",
+    "@types/qs": "^6.14.0",
+    "axios": "^1.10.0",
+    "framer-motion": "^12.23.6",
+    "next": "^15.4.1",
+    "next-auth": "^4.24.11",
+    "openai": "^5.9.2",
+    "qs": "^6.14.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "spotify-web-api-node": "^5.0.2"
   },
   "devDependencies": {
     "@types/node": "20",
-    "@types/react": "18",
-    "@types/react-dom": "18",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
     "autoprefixer": "10",
     "eslint": "8",
     "eslint-config-next": "13.5.4",
     "postcss": "8",
     "tailwindcss": "3",
-    "typescript": "5"
+    "typescript": "^5.8.3"
   }
 }

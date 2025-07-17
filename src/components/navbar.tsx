@@ -17,12 +17,13 @@ import {
 
 const NAV_MENU = [
   {
-    name: "Page",
+    name: "Inicio",
     icon: RectangleStackIcon,
   },
   {
-    name: "Account",
+    name: "Spotify",
     icon: UserCircleIcon,
+    href: "https://dikorn.cl/api/spotify",
   },
   {
     name: "Docs",
@@ -44,8 +45,7 @@ function NavItem({ children, href }: NavItemProps) {
         href={href || "#"}
         target={href ? "_blank" : "_self"}
         variant="paragraph"
-        color="gray"
-        className="flex items-center gap-2 font-medium text-gray-900"
+        className="flex items-center gap-2 font-medium text-gray-400"
       >
         {children}
       </Typography>
@@ -72,12 +72,11 @@ export function Navbar() {
       <div className="mx-auto container">
         <MTNavbar
           blurred
-          color="white"
-          className="z-50 mt-6 relative border-0 pr-3 py-3 pl-6"
+          className="z-50 mt-6 relative border-0 pr-3 py-3 pl-6 bg-gray-800"
         >
           <div className="flex items-center justify-between">
-            <Typography color="blue-gray" className="text-lg font-bold">
-              Material Tailwind
+            <Typography className="text-lg font-bold text-orange-900">
+              El RincóN del DikorN
             </Typography>
             <ul className="ml-10 hidden items-center gap-8 lg:flex">
               {NAV_MENU.map(({ name, icon: Icon, href }) => (

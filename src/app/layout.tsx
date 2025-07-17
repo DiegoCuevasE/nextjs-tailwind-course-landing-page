@@ -1,19 +1,18 @@
+'use client';
 import "./globals.css";
-import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Layout, FixedPlugin } from "@/components";
+import { SessionProvider } from 'next-auth/react';
+import MusicPlayer from '@/components/MusicPlayer';
+import { Providers } from './providers';
+import AuthProvider from '@/providers/SessionProvider';
+
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700", "900"],
   display: "swap",
 });
-
-export const metadata: Metadata = {
-  title: "NextJS Tailwind Course Landing Page",
-  description:
-    "Introducing Tailwind Course Landing Page, a versatile and engaging landing page template designed using Tailwind CSS and Material Tailwind.",
-};
 
 export default function RootLayout({
   children,
@@ -30,11 +29,17 @@ export default function RootLayout({
         ></script>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
-      <body className={roboto.className}>
+      <body className={`${roboto.className} bg-black text-orange-50`}>
+        <SessionProvider>
+          <Providers>
+            <AuthProvider>
         <Layout>
           {children}
-          <FixedPlugin />
+          {/* <FixedPlugin /> */}
         </Layout>
+        </AuthProvider>
+        </Providers>
+        </SessionProvider>
       </body>
     </html>
   );
