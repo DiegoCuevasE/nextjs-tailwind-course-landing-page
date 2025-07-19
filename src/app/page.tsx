@@ -22,7 +22,7 @@ export default function Campaign() {
       <Testimonial />
       <Events />
       <StudentsFeedback /> */}
-      <TrustedCompany />
+      {/* <TrustedCompany /> */}
       <Footer />
     </>
   );

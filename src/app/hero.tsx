@@ -41,7 +41,7 @@ function Hero() {
               variant="h1"
               className="lg:text-5xl !leading-snug text-3xl lg:max-w-3xl text-orange-900"
             >
-              Pide tu canción OEE
+              Pide tu canción
             </Typography>
             <Typography variant="lead" className="mb-10 mt-6 !text-gray-200">
               Te busco entre mis canciones de Spotify lo que mejor se adapte a lo que quieras. ¿Oreja de Van Gogh? Lo tengo. ¿La cumbia que le gustaba a tu papá en los 90? También.
@@ -56,7 +56,7 @@ function Hero() {
             <div className="grid grid-cols-2 lg:grid-cols-4 items-center justify-between gap-4 lg:justify-start">
               <Image width={144} height={144} className="w-36 grayscale opacity-60" src="/logos/logo-spotify.svg" alt="pinterest" />
               <Image width={144} height={144} className="w-36 grayscale opacity-60" src="/logos/logo-netflix.svg" alt="netflix" />
-              <Image width={144} height={144} className="w-36 grayscale opacity-60" src="/logos/logo-coinbase.svg" alt="coinbase" />
+              <Image width={144} height={144} className="w-36 grayscale opacity-60" src="/logos/logo-crunchy.svg" alt="crunchyroll" />
               <Image width={144} height={144} className="w-36 grayscale opacity-60" src="/logos/logo-google.svg" alt="google" />
             </div>
           </Card>

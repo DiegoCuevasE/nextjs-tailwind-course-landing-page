@@ -5,7 +5,7 @@ export default function MusicPage() {
     <>
     <Navbar />
     <div className="min-h-screen bg-gray-900 p-8">
-      <MusicPlayer />
+      COMING SOON 
     </div>
     </>
   );

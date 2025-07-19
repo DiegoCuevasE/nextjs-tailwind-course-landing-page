@@ -22,9 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>DikorN</title>
         <script
           defer
-          data-site="YOUR_DOMAIN_HERE"
+          data-site="dikorn.cl"
           src="https://api.nepcha.com/js/nepcha-analytics.js"
         ></script>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />

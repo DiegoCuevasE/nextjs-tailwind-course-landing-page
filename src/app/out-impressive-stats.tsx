@@ -35,7 +35,7 @@ const STATS = [
   {
     icon: ComputerDesktopIcon,
     count: "24/7",
-    title: "Flameando en el Valo",
+    title: "Fallando balas en el Valo",
   },
 ];
 
@@ -45,7 +45,7 @@ export function OutImpressiveStats() {
       <div className="container mx-auto text-center lg:text-left">
         <div className="grid place-items-center text-center">
           <Typography variant="h2" className="mb-2 text-4xl text-orange-900">
-            Mis estadísticas
+            Mas de mi
           </Typography>
           <Typography
             variant="lead"

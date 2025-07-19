@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 import {
   Navbar as MTNavbar,
   Collapse,
@@ -13,17 +14,25 @@ import {
   Squares2X2Icon,
   XMarkIcon,
   Bars3Icon,
+  MusicalNoteIcon,
+  PlayCircleIcon,
 } from "@heroicons/react/24/solid";
 
 const NAV_MENU = [
   {
     name: "Inicio",
     icon: RectangleStackIcon,
+    href: "/",
   },
   {
     name: "Spotify",
-    icon: UserCircleIcon,
-    href: "https://dikorn.cl/api/spotify",
+    icon: MusicalNoteIcon,
+    href: "/api/spotify",
+  },
+  {
+    name: "Anime",
+    icon: PlayCircleIcon,
+    href: "/anime",
   },
   {
     name: "Docs",
@@ -38,17 +47,31 @@ interface NavItemProps {
 }
 
 function NavItem({ children, href }: NavItemProps) {
+  const isInternal = href && href.startsWith('/');
+
+  if (isInternal) {
+    return (
+      <li>
+        <Link
+          href={href}
+          className="flex items-center gap-2 font-medium text-gray-400"
+        >
+          {children}
+        </Link>
+      </li>
+    );
+  }
+
   return (
     <li>
-      <Typography
-        as="a"
-        href={href || "#"}
-        target={href ? "_blank" : "_self"}
-        variant="paragraph"
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex items-center gap-2 font-medium text-gray-400"
       >
         {children}
-      </Typography>
+      </a>
     </li>
   );
 }
@@ -86,14 +109,8 @@ export function Navbar() {
                 </NavItem>
               ))}
             </ul>
-            <div className="hidden items-center gap-4 lg:flex">
-              <Button variant="text">Log in</Button>
-              <a
-                href="https://www.material-tailwind.com/blocks"
-                target="_blank"
-              >
-                <Button color="gray">Blocks</Button>
-              </a>
+            <div className="hidden items-center gap-4 lg:flex bg-orange-900">
+              <Button variant="text" className="text-gray-800">Log in</Button>
             </div>
             <IconButton
               variant="text"
